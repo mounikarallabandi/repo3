@@ -1,0 +1,553 @@
+*#What is DevOps:- Development + Operations-
+                                                                                 "it overcomes the gap between both Developers and operations team".
+& it is a process or culture improves the organization's ability to deliver their application - 
+by ensuring that there is a proper automation takes place with 
+a code Quality that we have maintained for the application & 
+ensuring there is a continuous monitoring and 
+finally continuous testing into the DevOps Process.
+Finally as a DevOps Engineer end goal is Fastens the Application delivery for that DevOps emerged or envolved.
+
+*#Why DevOps:-
+Developer(he is writes the code for application)------------------>Client will receives the application.
+So what happened in between?--->Let's say before DevOps
+❇️ Once the developer write the code, he use to check in the application code into somewhere because not a single developer writing the code. There will be multiple Developers writing the code. so, they have to store the code in central location.it can be Svn/git/any version control tool.
+❇️ System admin they used to create a Server. The developer has wrote the application they used to deploy this application on the server and end of the day you might test on a server.so for that system admins will creates the server and it can be in any platform.
+❇️after that on this server Server admin will install the application server and it will holds the application on to this server.
+❇️than Build & Release Engineer was deploys the application on to this server.
+❇️Next process would be somebody called a Tester so Tester would test this application on the server that is created by system admin.
+➡️Once tester test the application after that Build & Release Engineer will promote this application onto next level.either it can be production level or pre-production level (staging area).
+➡️So again application was well tested on pre production area than this Build & Release Engineer will take forward to the Customer that would be on Production Server.
+✅So for simply delivering the application from Developer Personal laptop to the Production Server :----what was Happening----"it was involving system admins and it was involving Build & Release Engineer and Server admins".
+🟢 so this entire process was taking almost 10 days or even months also and multiple people was involved because this is a manual effort.
+🟢 So whenever there is a manual effort your process will be slow down & it takes a lot of time also example :10 days or months. so to automate the entire process the word or the world of DevOps has emerged.
+
+
+
+
+2 Day class:
+
+SDLC- Software development lifecycle is a process that is followed by the industry to design, Develop and test high-quality product.
+Design + Develop + Test ---------> Deliver high quality product
+Planning ------> Defining ------> Designing ------> Building ------>Testing ------>Deploy
+✅ Planning: What happens in planning phase is you have to gather the requirement .
+✅ Defining: So in terms of defining requirement what you do is that you clearly define these requirement in terms of documents.(software requirement specification document)
+✅ Designing: So designing phase is very critical phase because in designing phase you will do high level design and low level design.
+- High level design: It refers to the overall system design. It describe the over all description/architecture of the application. It includes the description of system architecture, data base design.
+- Low level design: It refers to component level design process. It describe detailed description of each and every module. It also know as micro level detailed design.
+✅ Building: Developer read the documents that are prepared and he'll start writing code.
+✅ Testing: So what happens in the testing phase this application that is stored in the git repository that is taken and deployed in a server. so quality assurance engineers they basically take care of testing software.
+✅ Deployment: In the deployment phase you basically promote this application to the production. so here you are testing in a virtual server that can be you know like staging server or your development server but finally you push it into your production server.
+
+
+
+So, all these above processes can be done in different ways in SDLC life cycle.
+SDLC Models:
+"There are various software development life cycle models defined and designed which are followed during the software development process".
+1. Waterfall Model
+2.Iterative Model
+3.Spiral Model
+4.V-Model
+5.Agile Model
+
+Now a days every Organization is using Agile Methodologies to Develop the application Software's. i.e. we will do it in the form of short sprints and every sprint will take around 10 days or 2 weeks. and the team which is involved to this process is called as Agile team.
+In this Agile team will have 
+                  1) Developers
+                   2) Testers
+                    3) DevOps Engineers
+                     4)and Project Manager
+
+
+
+3 Day class
+
+Day - 3: Virtual machine part - 1:
+"✅ server: A server is a software or hardware device that accepts and responds to requests made over a network,
+The device that makes the request, and receives a response from the server is called client."
+
+✅ Virtualization: Is the process of creating a software based or virtual version of something whether that be compute , networking, storage, server or application.
+                                      In this we are installing multiple No. of Guest Machines on top of the Host Machine This is the Process of Virtualization.
+✅ What's makes Virtualization feasible is something called a hypervisor. it's simple a piece of software that run above the physical server or host.
+
+"There are two different types of Virtualization:-  
+
+ 1.Hardware Virtualization:  In this virtual Machines will launch independently i.e one sever will not connect with the another server.
+
+ 2.Para Virtualization:  in this Virtual Machines are Interdependent, from 2018 onwards para Virtualization is stopped in AWS."
+
+✅ What they do is essentially pool the resources from the physical server and allocate them to your virtual environment.
+Type of hypervisor:
+1) Type 1/ Bare metal hypervisor
+2) Type 2/hosted
+
+✅ Type 1/bare metal hypervisor: Type 1 is a hypervisor that is installed directly on top of the physical server.
+example - VMware Esxi, Microsoft hyper-v
+
+✅ Type 2/ hosted: There is layer of host OS that site between the physical server and hypervisor.
+example - Oracle, VirtualBox
+✅ Virtualization Benefits:
+1) Saves money on hardware and electricity
+2) Save money on floor space
+3) Save money on maintenance and management
+4) Portability
+5)full computing capability
+
+"Here The only difference between Server's and VM's is 
+                >Instead of Physical Servers 
+                >They are logical "	
+Who is doing the entire process your Hypervisor is doing the entire Process		
+So Hypervisor is Creating your VM's		
+in AWS VM"S are called as EC2 Instances		
+you can only have IP address & key pair  & with that you can access that logical VM	
+On top of one physical server you can use millions of VM's
+
+Day 4:
+
+
+file commands:touch 
+               cat 
+                vi or vim 
+ 1. create the file append some data cat > filename
+ 2. to see the content inside of the file cat filename and cat < filename
+ 3. to add some extra content inside of the file cat >> file name
+1.who :to see the no of the users
+2.who am i : to see the current user of the particular server
+3.pwd: present working directory
+4.sudo su (swith user/super user)
+5.useradd <user name> (for adding users)
+6.sudo su - <username>
+
+7.Directory commands:
+  *mkdir <directory name>  (making directory)
+  *cd <directory name> (change directory)
+   *cd .. (come back to one step back from that directory)
+   *cd ../.. (two steps back to previous directory)
+   *cd ~ (any no.of directories you have by using this command you can directly came back to ec2 user)
+8.rm (remove)
+rm filename  (both empty files and having some data also you can able to remove)
+rmdir <directory name>  (i can only able to delete empty directories)
+rm -r <directory name> (remove the directory having some files and directories)(r is nothing but recursively)
+rm -rf * (it will removes the all files and directories)
+
+cp <filename> <existing directory> (copy command)
+mv <filename> <existing directory> (move command)
+
+day:5
+
+
+File Permissions: For any files the file permissions are classified into 3 groups
+                     1.User (or) OWner Group (u)=rw-
+                      2.Group User(g)         =r--
+                       3. Other users(o)      =r--
+
+rwx rwx rwx 
+r-read 
+w- Write
+x-Execution
+            
+
+- rw- r-- r--
+
+1)Chmod 
+2)umask
+
+There are two different ways to modify the file permissions:
+  1)Symbolic mode: it will works on some symbols and Notations
+  2) Absolute Mode: it will works based on the octal number system.
+
+symbolic mode :
+  file name sirisha it is having user=rw
+                                  Group =r  + W
+                                  others =r
+adding the file permissions (+) = chmod u+w ,g+r ,o+w
+
+Removing the file permissions (-) = chmod u-w ,g-r ,o-w
+ 
+ Assigning file permissions (=) = chmod u=rw ,g=wx ,o=wx
+
+
+Absolute mode: In absolute mode we assigning the file permissions based on the Octal numeber 
+
+              (0 -7 octate)
+0- 000 ---
+1- 001 --X
+2- 010 -w-
+3- 011 -wx
+4- 100 r--     600  u=rw-
+5- 101 r-x           g=---
+6- 110 rw-            o=---
+7- 111 rwx
+
+
+* chown,chgroup,groupadd,groupdel Command:
+1)chown (change owner): this command is used to change the owner of the particaular file
+  chown -c <new owner> <filename>
+
+note: as a root user only you can able to add any users
+useradd : it is a command to add new users.
+useradd <username>
+sudo su - <username>
+
+2)groupadd <group name>
+
+3groupdel <groupname>
+
+adding the group : groupadd <group name>
+                   cd /etc
+                    cat group
+deleting the group : sudo groupdel <group name>
+
+
+Filer commands:
+        1)Head:this is used to to display the top 10 lines of the file
+            head <filename>
+             head -5 filename
+if we want list  the two files top 5 lines inthe sense
+ head -5 <one filename> <2nd file name>
+
+2)Tail command: last lines of that particular file
+   tail <filename>
+3)nl: it will displays within the numeric format
+   nl <filename>
+4)cut :by using cut you can cut and display the output
+5)paste:this will simply merge the lines of the particular text file
+we can able to merge both parallelly as well as serially
+6)sort: by usinng sort we can able to sort out the data and it will dispalys the ouptput
+7)tr:this will translate the output from one format to other format.
+8)sed:this will simply work upon text related files
+9)tee: this will simply translate the one or more outputs into one file.
+10)grep:this will searches the filters and which are used to search strings in a file.
+11)awk: it is used to do some text processing.
+12)less:it will automatically adjust the terminal window and displays the output.
+13)more:it will also displays the output but it is used to longer files.
+14)diff:it will differentiates the two files
+15)gzip :which is used to compress or truncate the files
+16)unzip :which is used to extract the files.
+17)gunzip:it is also compress your files
+18)uniqe :it will identifies the duplication lines
+19)comm:which will compile the files line by line
+20)cmp:it will compares the two files 
+21)find :it will find the files content and it will finds based on the time and size as well
+22)wc:it will list the byte count and word,line,characters also
+
+Day: 5
+
+
+wc -we can able to list the no.of the characters and lines inside of the file
+cd /etc
+cat /etc/passwd|wc -c 
+cat /etc/passwd|wc -l
+
+linked files:
+ In linux Os link is nothing but establishing logical relation between two files or more
+
+Note : always link shouls be established between one existing file and one new file
+       so we cannot link two existing files.
+There are 2 different types of links:
+
+1.hard links (or) default links : color interdependent
+2.soft link (or) symbolic links : sky blue color
+
+Hard link: In hardlinks every update is reflected vice versa
+           ex: i have created one file and links established between two or more files.now i update one file then all remaining files also updated.if i removed the parent file also link won't broken.
+
+
+The syntax for hard link : ln -v <existing file> <target file>
+
+Soft Link:
+             if i remove a parent file then remaining files are effected, where as in hard links this will not happen.
+
+The syntax for Soft link: ln -sv <existing file> <target file>
+
+
+
+Service commands:
+systemctl start <service name>
+systemctl restart <service name>
+systemctl stop <service name>
+systemctl enable <service name>
+systemctl status <service name>
+
+
+Day 6:
+
+what is Ip address?
+ In order to connect two devices via Internet we require Ip address
+
+pubilc ip?
+          whenever we connect two devices which are not in contact.for such cases we require public IP.
+ex:wattsapp
+
+Private IP?
+             whenever we connect the devices which are internally connected to a LAN we require Private IP address.
+ex: by  using Lan devices are connected
+
+the size of the VPC=ip address
+ max no.of subnets=200
+
+ip addresses can be allocated in the form of 2^n
+IPV4= 32 bit address
+2^32-5=2^27=lacs of ip
+VPC
+10.0.0.0/16=max=65536 ip's
+10.0.0.0/28=16 ip's
+
+subnet
+10.0.0.0/24=max=256 ip's
+10.0.0.0/28=min=16 ip's
+
+
+subnet: it is logical sub division of your ip address
+
+public subnet: instances which are present in public subnet can allow the traffic directly through internet gateway.
+So,here direct Internet access is present.
+
+Private subnet: instances which are present in the private gateway only allow the traffic through Nat gateway.
+
+Inter gateway:It is used to allows instances with public IP's
+
+NAT gateway: It allow instances present in the Private Subnet.
+
+Route Table:it will simply list the routes of the network.by changing the route table rules we can able to enter into the Private Subnetwork ares.
+
+fire wall types:
+                     1.Security Group-which is a Fire wall for your EC2 Instance
+                     2.NACL(Network access Control List):is a fire wall for your Subnet
+
+Day 7:
+
+
+IpV4 address are classified based on the two types.
+
+1)Class Inter domain range-Considered for only the Public Ip's
+2)class less inter domain range-Considered for Private Ip's
+
+NOTE: Always for VPC we are choosing the Class inter domain block range (CIDR)
+
+
+
+Day 8:
+
+Hands-on for Establishing NAT Gateway Connection to Private Subnet EC2 Server:
+
+VPC Peering Connection: establishing the connections between two vpc's it self is known as VPC Peering.
+
+for exchanging the data between the servers which are present in the different vpc's
+
+*we can able to establish the peering connections between the vpc which are present in the same region or different region
+*vpc peering connections can be established between same account or different account also.
+*peering connection can be established between acceptor and receiver
+ it is a two way connection.
+*for establishing the peering connection we have to choose the different CIDR block range.
+* while doing the peering connection we have to modify the both routes of the VPC's.
+
+VPC End-Points: It is nothing but a Private link which is established between your VPC and you AWS Services.
+                To reduce the data costs and establiushes the links between vpc and aws services.
+
+ There are different types of end-points
+                    1)gateway end-point :which is the firstly released endpoint
+                          by using this gateway end-point we can able to establish the link between vpc and 2 aws services only. Those are s3 and dynamo db.
+
+                    2)Interface End-point:this is able to establish the links between more than 84 services.
+
+                    3)Gateway load balancer end-point which is used to provide the security for the servers
+
+
+Day 9:
+
+
+IAM: Identity and Access Management 
+    it is a life time free service among all the services in AWS and it is a Global Service.
+
+Identity Management: Providing some sort of Authentications itself is known as Identity Management.
+                Authentication means providing login id and Password.
+
+it has 2 features: 
+
+          1.IAM Users: we will create IAM users id's along with passwords for users to access the services.
+   i.e we will provide the login credentials
+
+there are two different ways to login as a IAM user
+         1.by AWS Console :user id and password
+         2.by Programmatic access i.e cli: access keys and Secret keys.
+ 
+
+          2.IAM roles: IAM roles are attached to the services and assigned to the users. we do not have any credentials and these credentials are automatically generated by AWS to access the services.
+
+
+
+Access Management: 
+                   Providing some sort of Otherizations itself is known as Access Management.
+                Otherizations means providing access permissions to the users to access the Services.
+
+2 Features:
+         1.IAM Policies: we will give permissions to the users to access the services.
+
+again these policies are classified into two types:
+
+1.AWS Managed policies : for read-only permissions and full access permissions
+2.Custom managed policies: These are the specified fine grind permissions and these are created by customer
+                              and these policies are created by using JSON format.
+
+Day 9:
+
+
+s3 is a simple storage service which is provided by amazon.
+so it is used to store your objects. through website service Interface i.e Internet
+
+Why S3?
+1.Availability
+2.Scalability
+3.Internet
+4.Better Latency: in s3 uses SSD(Solid Disk Drives)
+
+S3 Bucket Setup?
+
+ What is Bucket? it is a Container which will stores the objects.
+
+how to make the objects public :
+
+1.go inside of the bucket and modify the permissions at bucket level i.e diable block public access & save.
+2.go inside of the object and modify the object level Permissions by enabling ACL's
+3.Go to Object Actions in Object and clck on the make Public ACL.
+
+
+there are two different types of websites:
+1.static website:data displayed will be common for all the users
+
+ex:ott platforms,redbus,amazon prime
+2.Dynamic website: data will be displayed and fetched based on the user interest.
+ex:instagram 
+
+Static Website Bucket URL:
+http://awss39897.s3-website.ap-south-1.amazonaws.com
+
+Object Url
+https://awss39897.s3.ap-south-1.amazonaws.com/index.html
+
+Day 10:
+
+S3 Service with Cli:
+
+Pre-requisites:
+1.AWS cli setup
+2.IAM user Programmatic access with access keys & s3 full access for that user
+3.After that launch Ec2 instance
+
+1.Bucket Creation:aws s3 mb s3://<new of the bucket>
+2.list buckets:aws s3 ls
+3.list objects:aws s3 ls s3://<bucket name>
+4.files upload: aws s3 cp <filename> s3://bucket name
+5.delete objects:aws s3 rm s3://bucket name <object name>
+6.delete bucket: aws s3 rb s3://bucket name
+7.file download :aws s3 cp s3://bucket name <file name>
+
+s3 storage classes: these storage classes are for storing your ojects i.e files as copies
+
+1.standard storage: 100 mb file i want to frequently access that particular file then we will put in this storage class & finally i can able to get same mb of file and file will be stored as 3 copies 100mb -10/-
+
+2.reduced redundant storage class- 100mb file --1 year --1.5 % data will be stored as 3 copies 100mb-4 or 5 /-
+
+3.standard In-frequent storage class:there will be 100% upload and 100% download and your data is also stored as 3 copies.  6/-
+
+4.one-zone in-frequent storage class: your objects stored as only one copy  100mb-4/-
+
+5.Intelligent Storage class 
+6.Glacier Storage Class:suppose i have uploaded 100mb but here file will be compressed i.e 50 mb uploading and 50mb downloading only happen-5/
+
+7.Glacier Deep archival:here only 20mb of file upload and 20 mb of file downloading will happen.100mb-2/-
+
+
+and these are classified based on 4 categories:
+1.Frequently accessed storage
+                             a) Standard and reduced redundant storage class
+2.In-frequent accessed storage
+                              a)Standard & one-zone In-frequent accessed storage class
+3.Archival Storage
+                   a) Glacier and Glacier deep archival
+4.Intelligent storage: if we donot have any idea where to store the files in such cases we will put in this type.
+
+Day 11:
+
+security can be provided at bucket level as well as object level in two different ways:
+
+for security purpose we should always store the files in a bucket in encrypted format.
+
+eg: aws web service ....text file
+
+ i am 434g ghh ....encrypted file
+download this encrypted file iamggh455jh ...decrypt by decrypt keys
+
+after that reciever will get the exact text file.
+
+1.Encryption:  
+               so before creation of your bucket and uploading some files you have to encrypt.
+1)server side encryption-s3:
+
+                  the key will be provided by AWS & also automatically once key gets mapped with the bucket 
+Encryption and decryption will be happen.
+
+2)sse-kms: in this we can able to edit and manage the key and even we can able to delete the key.
+
+3)sse-cmk:here customer will manage the key and customer will generate the key.
+
+2.access permissions
+
+1)bucket policy
+2)Access control list (ACL's)
+
+Day 12:
+
+
+
+load balance:
+
+ Disturbting the load b/w your servers.
+
+Elasiticity: All elasiticity load balancers are can be classified  on osi models(open system interconnect)
+
+OSI:  it is used to connect the one server to another server to transfer the data
+
+Targets: EC2, LAMBDA,ECS,Compute service
+
+they are 3 types of load balancers
+
+1.Application load balancer
+2.network load balancer
+3.gateway load balancer
+
+1. Application Load balancers:  
+                               Its works on 7th layer.its supports the path based routing and it also sends the traffic to the server based on traffic.it has the dynamic ip address and it could be change  beacuse of the traffic.
+
+2.network load balancer: 
+                           Its works on 4th layer.Here load is equally disturbting b/w the servers and it will not see the  what kind of traffic. it is basically works on round rabin method.it has the static  fixed ip address.
+
+3.gateway load balancer: it is used for security purpose.
+
+DNS: Its storages the ip address.
+
+
+Day 13:
+
+Autoscaling: Based on requirment we can increases or decreases the containers on which a specific services is running without end users eexpericing any downtime.
+controling the trafiic between the servers.scalling up and scalling down
+Different types of Autoscaling:
+horizontal autoscaling:in this horizontal autoscaling servers will be added in horizontal direction with some sort of configurations.here there is no downtime because always one server running in background.
+1.Dynamic autoscaling:it is nothing but based on cpu utilization you are setting some metrics.
+for example you are using 80% in the sense it will automatically add one more server.
+suppose you are using 20% in the sense it will automatically remove one server.
+2.Predictive autoscaling:it is nothing but based on machine level algorithm aws will take decissions and it will create ec2 servers.
+3.Schedule autoscaling:it is nothing but based on shedule time you are setting some metrics.
+proxy server:whenever we are launching the servers under the autoscaling in the sense we are call that as a proxy servers.
+proxy server is noting but will receives the request and it will monitor the health checks.
+
+Day14:
+
+Route 53:  Its also acts as DNS service. Here also we have create hosted zones,create policy,create health check and register domain.
+
+Cloud watch: it is montoring the metrics
+
+cloud trail: it is used for tracing  purpose. also we can see the users who cretae the instances and terminate the instances in aws.
+
+Lambda:  Here, we can directly run the code. it is a paid service.
+
+ECR: Here we can storage the Docker containers in aws.
